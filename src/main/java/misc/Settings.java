@@ -24,6 +24,6 @@ public class Settings {
     //public final static String PATH_CATALOGUE = "/Users/Daria/IdeaProjects/g2016w_dse_0206/untitled/src/catalogue.txt";
     //public final static String PATH_CUSTOMERS = "/Users/Daria/IdeaProjects/g2016w_dse_0206/untitled/src/customers.txt";
 
-    public final static String PATH_CATALOGUE = "/Users/sebastian/Desktop/DSE/g2016w_dse_0206/untitled/src/catalogue.txt";
-    public final static String PATH_CUSTOMERS = "/Users/sebastian/Desktop/DSE/g2016w_dse_0206/untitled/src/customers.txt";
+    public final static String PATH_CATALOGUE = "/Users/sebastian/Desktop/garbage/jasdd/src/main/java/catalogue.txt";
+    public final static String PATH_CUSTOMERS = "/Users/sebastian/Desktop/garbage/jasdd/src/main/java/customers.txt";
 }

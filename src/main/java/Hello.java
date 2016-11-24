@@ -1,9 +1,15 @@
 package main.java;
 
+import DSEshop.Admin;
+import DSEshop.Product;
+import DSEshop.ProductCatalogue;
+import dao.SerializedDAO;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import java.util.List;
 
 // Plain old Java Object it does not extend as class or implements
 // an interface
@@ -15,8 +21,18 @@ import javax.ws.rs.core.MediaType;
 // The browser requests per default the HTML MIME type.
 
 //Sets the path to base URL + /hello
-@Path("/hello")
+@Path("/onlineShop")
 public class Hello {
+
+    Admin admin;
+    SerializedDAO dao;
+
+    public Hello() {
+        dao = new SerializedDAO();
+        dao.getData();
+
+        admin = Admin.getInstance();
+    }
 
     // This method is called if TEXT_PLAIN is request
     @GET
@@ -38,6 +54,13 @@ public class Hello {
     public String sayHtmlHello() {
         return "<html> " + "<title>" + "Hello Jersey" + "</title>"
                 + "<body><h1>" + "Hello Jersey" + "</body></h1>" + "</html> ";
+    }
+
+    @GET
+    @Path("/get_products")
+    @Produces(MediaType.APPLICATION_XML)
+    public List<Product> getProducts() {
+        return admin.getProductCatalogue().getProductList();
     }
 
 }

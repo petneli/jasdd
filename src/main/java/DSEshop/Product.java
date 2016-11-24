@@ -1,5 +1,6 @@
 package DSEshop;
 
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
@@ -21,6 +22,7 @@ public class Product implements Serializable{
         this.productPrice = productPrice;
     }
 
+    @XmlElement
     public String getProductName() {
         return productName;
     }
@@ -29,6 +31,7 @@ public class Product implements Serializable{
         this.productName = productName;
     }
 
+    @XmlElement
     public int getProductID() {
         return productID;
     }
@@ -37,6 +40,7 @@ public class Product implements Serializable{
         this.productID = productID;
     }
 
+    @XmlElement
     public double getProductPrice() {
         return productPrice;
     }
