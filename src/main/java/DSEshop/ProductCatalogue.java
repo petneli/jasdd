@@ -2,12 +2,15 @@ package DSEshop;
 
 import misc.Settings;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Product catalogue class. Contains a list of products which are listed into the online shop. Built on the singleton pattern.
  */
+@XmlRootElement
 public class ProductCatalogue {
     private List <Product> productList;
 
@@ -30,7 +33,7 @@ public class ProductCatalogue {
         }
         return instance;
     }
-
+    @XmlElement
     public List<Product> getProductList() {
         return productList;
     }

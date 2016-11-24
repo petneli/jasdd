@@ -26,7 +26,7 @@ public class Product implements Serializable{
     public String getProductName() {
         return productName;
     }
-
+    @XmlElement
     public void setProductName(String productName) {
         this.productName = productName;
     }
@@ -35,7 +35,7 @@ public class Product implements Serializable{
     public int getProductID() {
         return productID;
     }
-
+    @XmlElement
     public void setProductID(int productID) {
         this.productID = productID;
     }
@@ -44,11 +44,11 @@ public class Product implements Serializable{
     public double getProductPrice() {
         return productPrice;
     }
-
+    @XmlElement
     public void setProductPrice(double productPrice) {
         this.productPrice = productPrice;
     }
-
+    @XmlElement
     public String toString(){
         String productDetails = "[ Product Name: " + productName + ", Price: " + productPrice + " ]\n ";
         return productDetails;

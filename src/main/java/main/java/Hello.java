@@ -58,9 +58,9 @@ public class Hello {
 
     @GET
     @Path("/get_products")
-    @Produces(MediaType.APPLICATION_XML)
-    public List<Product> getProducts() {
-        return admin.getProductCatalogue().getProductList();
+    @Produces(MediaType.TEXT_PLAIN)
+    public String getProducts() {
+        return admin.getProductCatalogue().toString();
     }
 
 }
