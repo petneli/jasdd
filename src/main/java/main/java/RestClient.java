@@ -27,12 +27,16 @@ public class RestClient {
 
 
         Form form =new Form();
-        form.param("ajlaaa", "4000");
+        form.param("productName", "ajla");
+        form.param("productPrice", "2793");
+
+
         service.path("rest").path("onlineShop/add_product").request().post(Entity.entity(form,MediaType.APPLICATION_FORM_URLENCODED));
 
+        System.out.println("----------");
 
         //Get all the todos, id 4 should have been created
-       // System.out.println(service.path("rest").path("onlineShop/productList").request().accept(MediaType.APPLICATION_XML).get(String.class));
+        System.out.println(service.path("rest").path("onlineShop/productList").request().accept(MediaType.APPLICATION_XML).get(String.class));
 
     }
 
