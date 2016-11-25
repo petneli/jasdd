@@ -3,9 +3,7 @@ package main.java;
 import DSEshop.*;
 import dao.SerializedDAO;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 @Path("/onlineShop")
@@ -48,5 +46,14 @@ public class RestOnlineShopService {
     @Produces(MediaType.APPLICATION_XML)
     public ProductCatalogue getCatalogue() {
         return ProductCatalogue.getInstance();
+    }
+
+
+    @POST
+    @Path("/add_product")
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    public void newTodo(@FormParam("productName") String productName, @FormParam("productPrice") String productPrice){
+        admin.getProductCatalogue().addProduct(new Product(productName, Integer.parseInt(productPrice)));
+        dao.saveData();
     }
 }
