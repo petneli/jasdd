@@ -1,10 +1,13 @@
 package DSEshop;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 /**
  * Checkout class. No use at the moment. Future functionality will be added.
  */
+@XmlRootElement
 public class Checkout {
     private Customer customer;
     private int orderID;
@@ -23,7 +26,7 @@ public class Checkout {
     public Customer getCustomer() {
         return customer;
     }
-
+    @XmlElement
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
@@ -31,7 +34,7 @@ public class Checkout {
     public int getOrderID() {
         return orderID;
     }
-
+    @XmlElement
     public void setOrderID(int orderID) {
         this.orderID = orderID;
     }
@@ -39,7 +42,7 @@ public class Checkout {
     public int getShippingID() {
         return shippingID;
     }
-
+    @XmlElement
     public void setShippingID(int shippingID) {
         this.shippingID = shippingID;
     }
@@ -47,7 +50,7 @@ public class Checkout {
     public double getSubtotal() {
         return subtotal;
     }
-
+    @XmlElement
     public void setSubtotal(double subtotal) {
         this.subtotal = subtotal;
     }
@@ -55,7 +58,7 @@ public class Checkout {
     public List<Product> getProductList() {
         return productList;
     }
-
+    @XmlElement
     public void setProductList(List<Product> productList) {
         this.productList = productList;
     }

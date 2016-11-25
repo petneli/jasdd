@@ -1,5 +1,7 @@
 package DSEshop;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,6 +10,7 @@ import java.util.List;
 /**
  * Wishlist class. Implements Serializable interface. Used for storing items on the users wishlist.
  */
+@XmlRootElement
 public class WishList implements Serializable {
 
     private static final long serialVersionUID = -5838413452365634032L;
@@ -30,7 +33,7 @@ public class WishList implements Serializable {
     public Date getCreationDate() {
         return creationDate;
     }
-
+    @XmlElement
     public void setCreationDate(Date creationDate) {
         this.creationDate = creationDate;
     }
@@ -38,7 +41,7 @@ public class WishList implements Serializable {
     public Customer getCustomer() {
         return customer;
     }
-
+    @XmlElement
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }

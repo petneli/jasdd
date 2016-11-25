@@ -2,12 +2,14 @@ package DSEshop;
 
 import misc.Settings;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Admin class. Built on the singleton pattern, contains a list of customers, as well as the product catalogue.
  */
+@XmlRootElement
 public class Admin extends User {
 
     private List <Customer> customerList;

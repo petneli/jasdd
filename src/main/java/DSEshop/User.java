@@ -1,10 +1,12 @@
 package DSEshop;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
 /**
  * Created by Daria on 26.10.16.
  */
+@XmlRootElement
 public class User implements Serializable{
 
     private static final long serialVersionUID = 4816916944840634004L;

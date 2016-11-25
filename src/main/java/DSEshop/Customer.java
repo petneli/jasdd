@@ -1,11 +1,14 @@
 package DSEshop;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Customer class which implements the Serializable interface.
  */
+@XmlRootElement
 public class Customer extends User implements Serializable {
 
     private static final long serialVersionUID = -2336083485963790178L;
@@ -27,11 +30,10 @@ public class Customer extends User implements Serializable {
         this.paymentMethod = new PaymentMethod("billing Adress", "Payment Adress");
     }
 
-
     public WishList getWishList() {
         return this.wishList;
     }
-
+    @XmlElement
     public void setWishList(WishList wishList) {
         this.wishList = wishList;
     }
@@ -39,7 +41,7 @@ public class Customer extends User implements Serializable {
     public ShoppingCart getShoppingCart() {
         return shoppingCart;
     }
-
+    @XmlElement
     public void setShoppingCart(ShoppingCart shoppingCart) {
         this.shoppingCart = shoppingCart;
     }
@@ -47,13 +49,13 @@ public class Customer extends User implements Serializable {
     public PaymentMethod getPaymentMethod() {
         return paymentMethod;
     }
-
+    @XmlElement
     public void setPaymentMethod(PaymentMethod paymentMethod) {
         this.paymentMethod = paymentMethod;
     }
 
     public Checkout getCheckout() {return checkout; }
-
+    @XmlElement
     public void setCheckout(Checkout checkout) {this.checkout = checkout;}
 
 }

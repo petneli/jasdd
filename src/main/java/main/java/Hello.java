@@ -1,15 +1,21 @@
 package main.java;
 
 import DSEshop.Admin;
+import DSEshop.Customer;
 import DSEshop.Product;
-import DSEshop.ProductCatalogue;
 import dao.SerializedDAO;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
+
+
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.GenericType;
 
 // Plain old Java Object it does not extend as class or implements
 // an interface
@@ -58,9 +64,55 @@ public class Hello {
 
     @GET
     @Path("/get_products")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String getProducts() {
-        return admin.getProductCatalogue().toString();
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getProducts() {
+        /*
+        List<Product> list = admin.getProductCatalogue().getProductList();
+        GenericEntity<List<Product>> entity = new GenericEntity<List<Product>>(list) {};
+        Response response = Response.ok(entity).build();
+*/
+
+        //use GenericType instead
+        //List<Product> list = Client.create().resource(admin.getProductCatalogue().getProductList())
+         //       .get(new GenericType<List<Product>>(){});
+
+
+        List<Product> persons = admin.getProductCatalogue().getProductList();
+        return Response.ok(persons).build();
+
+
     }
 
+    //
+
+    //@Produces(MediaType.APPLICATION_XML)
+
+    //public List<Customer> getCustomers() {
+
+    //return admin.getCustomerList();
+
+    //}
+
+    //
+/*
+    @GET
+    @Path("/s")
+    @Produces(MediaType.APPLICATION_XML)
+    public Response getCusomters() {
+        List<Customer> list = admin.getCustomerList();
+
+        //use GenericType instead
+        List<Customer> list1 = new GenericType<List<Customer>>(list){};
+        return
+    }
+
+*/
+
+    @GET
+    @Path("/g")
+    @Produces(MediaType.APPLICATION_XML)
+    public Response getProd() {
+        Response.ResponseBuilder rb = Response.ok().entity(admin.getProductCatalogue().getProductList());
+        return rb.build();
+    }
 }

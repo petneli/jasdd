@@ -1,5 +1,7 @@
 package DSEshop;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +9,7 @@ import java.util.List;
 /**
  * Created by Daria on 26.10.16.
  */
+@XmlRootElement
 public class ShoppingCart implements Serializable {
 
     private static final long serialVersionUID = -532984408656747948L;
@@ -22,7 +25,7 @@ public class ShoppingCart implements Serializable {
     public Customer getCustomer() {
         return customer;
     }
-
+    @XmlElement
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
