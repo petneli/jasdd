@@ -16,6 +16,8 @@ public class Product implements Serializable{
     private int productID;
     private double productPrice;
 
+    public Product(){}
+
     public Product(String productName, double productPrice) {
         this.productName = productName;
         this.productID = Admin.getInstance().getProductCatalogue().getProductList().size() +1;

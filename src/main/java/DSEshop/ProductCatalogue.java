@@ -33,11 +33,12 @@ public class ProductCatalogue {
         }
         return instance;
     }
-    @XmlElement
+
     public List<Product> getProductList() {
         return productList;
     }
 
+    @XmlElement
     public void setProductList(List<Product> productList) {
         this.productList = productList;
     }

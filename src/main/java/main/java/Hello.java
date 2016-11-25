@@ -1,8 +1,6 @@
 package main.java;
 
-import DSEshop.Admin;
-import DSEshop.Customer;
-import DSEshop.Product;
+import DSEshop.*;
 import dao.SerializedDAO;
 
 import javax.ws.rs.GET;
@@ -11,11 +9,13 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.xml.bind.annotation.XmlElement;
+import java.util.ArrayList;
 import java.util.List;
 
 
-import com.sun.jersey.api.client.Client;
-import com.sun.jersey.api.client.GenericType;
+//import com.sun.jersey.api.client.Client;
+//import com.sun.jersey.api.client.GenericType;
 
 // Plain old Java Object it does not extend as class or implements
 // an interface
@@ -114,5 +114,35 @@ public class Hello {
     public Response getProd() {
         Response.ResponseBuilder rb = Response.ok().entity(admin.getProductCatalogue().getProductList());
         return rb.build();
+    }
+
+    @GET
+    @Path("/gimmeFive")
+    @Produces(MediaType.APPLICATION_XML)
+    public Product getProduct() {
+        Product p = new Product("shit", 100);
+        return p;
+    }
+
+    @GET
+    @Path("/dummyList")
+    @Produces(MediaType.APPLICATION_XML)
+    public List<Dummy> getDummyList() {
+        Dummy d = new Dummy("hello", "there");
+        Dummy e = new Dummy("aaa", "bbb");
+
+
+        List<Dummy> list = new ArrayList<Dummy>();
+        list.add(d);
+        list.add(e);
+
+        return list;
+    }
+
+    @GET
+    @Path("/productList")
+    @Produces(MediaType.APPLICATION_XML)
+    public ProductCatalogue getCatalogue() {
+        return ProductCatalogue.getInstance();
     }
 }
