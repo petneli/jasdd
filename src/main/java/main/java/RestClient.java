@@ -22,7 +22,6 @@ public class RestClient {
         Client client = ClientBuilder.newClient(config);
         WebTarget service = client.target(getBaseURI());
 
-        //Get get all Todos id 1 should be deleted
         System.out.println(service.path("rest").path("onlineShop/productList").request().accept(MediaType.APPLICATION_XML).get(String.class));
 
 
@@ -34,8 +33,6 @@ public class RestClient {
         service.path("rest").path("onlineShop/add_product").request().post(Entity.entity(form,MediaType.APPLICATION_FORM_URLENCODED));
 
         System.out.println("----------");
-
-        //Get all the todos, id 4 should have been created
         System.out.println(service.path("rest").path("onlineShop/productList").request().accept(MediaType.APPLICATION_XML).get(String.class));
 
     }
