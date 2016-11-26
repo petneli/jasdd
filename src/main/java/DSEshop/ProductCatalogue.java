@@ -49,6 +49,14 @@ public class ProductCatalogue {
      */
     public void addProduct(Product p){ productList.add(p);}          // boolean?
 
+    public Product getProductById(int id){
+        Product product = new Product();
+        for(Product p: productList){
+            if(p.getProductID() == id);
+                product = p;
+        }
+        return product;
+    }
     public String toString(){
         String s = "";
         for(Product p: productList){

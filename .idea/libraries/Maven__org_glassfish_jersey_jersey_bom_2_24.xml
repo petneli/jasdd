@@ -1,8 +1,6 @@
 <component name="libraryTable">
   <library name="Maven: org.glassfish.jersey:jersey-bom:2.24">
-    <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/jersey-bom/2.24/jersey-bom-2.24.jar!/" />
-    </CLASSES>
+    <CLASSES />
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/jersey-bom/2.24/jersey-bom-2.24-javadoc.jar!/" />
     </JAVADOC>

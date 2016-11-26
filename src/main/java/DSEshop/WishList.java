@@ -24,6 +24,7 @@ public class WishList implements Serializable {
      * @param creationDate
      * @param customer
      */
+    public  WishList() {}
     public WishList(Date creationDate, Customer customer) {
         this.creationDate = creationDate;
         this.customer = customer;
@@ -45,7 +46,7 @@ public class WishList implements Serializable {
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
-
+    @XmlElement
     public void addToWishlist(Product p) {
         this.wishList.add(p);
     }

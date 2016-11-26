@@ -16,5 +16,7 @@
     <button id="submit" value="Register">Login</button>
 </form>
 
+<a href="http://localhost:8080/jasdd_war_exploded/">Continue</a>
+
 </body>
 </html>
