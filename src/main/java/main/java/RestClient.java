@@ -26,8 +26,8 @@ public class RestClient {
 
 
         Form form =new Form();
-        form.param("productName", "daria");
-        form.param("productPrice", "56356");
+        form.param("productName", "neli");
+        form.param("productPrice", "66");
 
 
         service.path("rest").path("onlineShop/add_product").request().post(Entity.entity(form,MediaType.APPLICATION_FORM_URLENCODED));
