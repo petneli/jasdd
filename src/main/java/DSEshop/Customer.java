@@ -25,7 +25,7 @@ public class Customer extends User implements Serializable {
      */
     public Customer(String userName, String password) {
         super(Admin.getInstance().getCustomerList().size()+1,userName, password);
-        this.wishList = new WishList(new Date(), this);;;
+        this.wishList = new WishList(new Date(), this);
         this.shoppingCart = new ShoppingCart(this);
         this.paymentMethod = new PaymentMethod("billing Adress", "Payment Adress");
     }

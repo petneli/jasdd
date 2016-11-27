@@ -51,13 +51,31 @@ public class RestOnlineShopService {
         String loggedIn = (String)session.getAttribute("loggedIn");
         if(loggedIn != null)
             return "<html> " + "<title>" + "RestOnlineShopService Jersey" + "</title>"
-                + "<body><h1>" + "Online Shop Jersey" + "</body></h1>"
-                + "<h2>" + "Welcome back, " + loggedIn + "!</h2>"
-                + "</html> ";
+                + "<body><h1>" + "Online Shop Jersey" + "</h1>"
+                + "<h2>" + "Welcome back, " + loggedIn + "!</h2>" +
+                    "<ul>" +
+                    "    <li><a href=\"http://localhost:8080/jasdd_war_exploded/Login.jsp\">Login</a></li>\n" +
+                    "    <li><a href=\"http://localhost:8080/jasdd_war_exploded/Register.jsp\">Register</a></li>\n" +
+                    "    <li><a href=\"http://localhost:8080/jasdd_war_exploded/ProductList.jsp\">Productcatalogue</a></li>\n" +
+                    "    <li><a href=\"http://localhost:8080/jasdd_war_exploded/rest/onlineShop\">Hello page</a></li>\n" +
+                    "    <li><a href=\"http://localhost:8080/jasdd_war_exploded/AddProduct.jsp\">Add Product</a></li>\n" +
+                    "    <li><a href=\"http://localhost:8080/jasdd_war_exploded/Wishlist.jsp\">Wishlist</a></li>\n" +
+                    "  </ul>" +
+                    "</body>" +
+                    "</html> ";
         else
             return "<html> " + "<title>" + "RestOnlineShopService Jersey" + "</title>"
-                    + "<body><h1>" + "Online Shop Jersey" + "</body></h1>"
-                    + "</html> ";
+                    + "<body><h1>" + "Online Shop Jersey" + "</h1>"+
+                    "<ul>" +
+                    "    <li><a href=\"http://localhost:8080/jasdd_war_exploded/Login.jsp\">Login</a></li>\n" +
+                    "    <li><a href=\"http://localhost:8080/jasdd_war_exploded/Register.jsp\">Register</a></li>\n" +
+                    "    <li><a href=\"http://localhost:8080/jasdd_war_exploded/ProductList.jsp\">Productcatalogue</a></li>\n" +
+                    "    <li><a href=\"http://localhost:8080/jasdd_war_exploded/rest/onlineShop\">Hello page</a></li>\n" +
+                    "    <li><a href=\"http://localhost:8080/jasdd_war_exploded/AddProduct.jsp\">Add Product</a></li>\n" +
+                    "    <li><a href=\"http://localhost:8080/jasdd_war_exploded/Wishlist.jsp\">Wishlist</a></li>\n" +
+                    "  </ul>" +
+                    "</body>" +
+                    "</html> ";
 
     }
 
@@ -72,17 +90,19 @@ public class RestOnlineShopService {
     @POST
     @Path("/add_product")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public void addProduct(@FormParam("productName") String productName, @FormParam("productPrice") String productPrice){
+    public void addProduct(@FormParam("productName") String productName, @FormParam("productPrice") String productPrice, @Context HttpServletResponse response) throws IOException {
         admin.getProductCatalogue().addProduct(new Product(productName, Integer.parseInt(productPrice)));
         dao.saveData();
+        response.sendRedirect("http://localhost:8080/jasdd_war_exploded/ProductList.jsp");
     }
 
     @POST
     @Path("/register")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public void register(@FormParam("customerName") String customerName, @FormParam("customerPass") String customerPass){
+    public void register(@FormParam("customerName") String customerName, @FormParam("customerPass") String customerPass, @Context HttpServletResponse response) throws IOException {
         admin.register(customerName,customerPass);
         dao.saveData();
+        response.sendRedirect("http://localhost:8080/jasdd_war_exploded/Login.jsp");
     }
 
     @POST
@@ -93,7 +113,7 @@ public class RestOnlineShopService {
         if(admin.login(customerName,customerPass))
             response.sendRedirect("http://localhost:8080/jasdd_war_exploded/rest/onlineShop");
         else
-            response.sendRedirect("http://localhost:8080/jasdd_war_exploded/ResponseRsdf.jsp");
+            response.sendRedirect("http://localhost:8080/jasdd_war_exploded/Login.jsp");
 
         HttpSession session= request.getSession(true);
         String loggedIn = (String)session.getAttribute("loggedIn");
@@ -101,6 +121,9 @@ public class RestOnlineShopService {
             System.out.println("Logged in: " + loggedIn);
         } else {
             session.setAttribute("loggedIn", customerName);
+            Customer customer = admin.getCustomerByUsername(loggedIn);
+            WishList w = customer.getWishList();
+            session.setAttribute("wishList", w);
 
             System.out.println("Setting session param: " + customerName);
         }
@@ -120,6 +143,10 @@ public class RestOnlineShopService {
         if (loggedIn!=null) {
             Customer customer = admin.getCustomerByUsername(loggedIn);
             customer.getWishList().addToWishlist(p);
+
+            WishList w = customer.getWishList();
+            session.setAttribute("wishList", w);
+            response.sendRedirect("http://localhost:8080/jasdd_war_exploded/Wishlist.jsp");
         } else {
             response.sendRedirect("http://localhost:8080/jasdd_war_exploded/Login.jsp");
         }
@@ -129,7 +156,7 @@ public class RestOnlineShopService {
     @GET
     @Path("/wishList")
     @Produces(MediaType.APPLICATION_XML)
-    public WishList getWishlist(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
+    public WishList getWishList(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
 
         HttpSession session= request.getSession(true);
         String loggedIn = (String)session.getAttribute("loggedIn");

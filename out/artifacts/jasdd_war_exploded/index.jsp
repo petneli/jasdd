@@ -8,9 +8,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>Online Shop</title>
   </head>
   <body>
-  $END$
+  <ul>
+    <li><a href="http://localhost:8080/jasdd_war_exploded/Login.jsp">Login</a></li>
+    <li><a href="http://localhost:8080/jasdd_war_exploded/Register.jsp">Register</a></li>
+    <li><a href="http://localhost:8080/jasdd_war_exploded/ProductList.jsp">Productcatalogue</a></li>
+    <li><a href="http://localhost:8080/jasdd_war_exploded/rest/onlineShop">Hello page</a></li>
+    <li><a href="http://localhost:8080/jasdd_war_exploded/AddProduct.jsp">Add Product</a></li>
+    <li><a href="http://localhost:8080/jasdd_war_exploded/Wishlist.jsp">Wishlist</a></li>
+  </ul>
   </body>
 </html>

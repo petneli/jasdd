@@ -1,9 +1,14 @@
+<%@ page import="DSEshop.*" %>
+<%@ page import="java.util.List" %><%--
+  Created by IntelliJ IDEA.
+  User: nelipetkova
+  Date: 26.11.16
+  Time: 14:08
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Register</title>
 </head>
 <body>
 <ul>
@@ -15,15 +20,25 @@
     <li><a href="http://localhost:8080/jasdd_war_exploded/Wishlist.jsp">Wishlist</a></li>
 </ul>
 
-<form action="../jasdd_war_exploded/rest/onlineShop/register" method="POST">
-    <label>Name: </label>
-    <input name="customerName" />
-    <br/>
-    <label>Password: </label>
-    <input name="customerPass" />
-    <br/>
-    <button id="submit" value="Register">Register</button>
-</form>
+<title>Wishlist</title>
+<ul>
+    <%
+        WishList wishList = (WishList) session.getAttribute("wishList");
+
+        if(wishList == null) {
+            System.out.println("No products yet.");
+        }
+        else {
+            List<Product> list = wishList.getWishList();
+
+            for(Product p : list) {
+        %>
+        <%= p.toString() %><br>
+        <%
+            }
+        }
+    %>
+</ul>
 
 </body>
 </html>

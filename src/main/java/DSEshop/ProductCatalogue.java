@@ -52,7 +52,7 @@ public class ProductCatalogue {
     public Product getProductById(int id){
         Product product = new Product();
         for(Product p: productList){
-            if(p.getProductID() == id);
+            if(p.getProductID() == id)
                 product = p;
         }
         return product;

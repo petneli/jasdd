@@ -49,7 +49,7 @@ public class Product implements Serializable{
     }
 
     public String toString(){
-        String productDetails = "[ Product Name: " + productName + ", Price: " + productPrice + " ]\n ";
+        String productDetails = "[ " + productID+ ".  Product Name: " + productName + ", Price: " + productPrice + " ]\n ";
         return productDetails;
     }
 }
