@@ -2,42 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72cce204-f592-4db0-9ecd-8ba59c8535f7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/CustomerList.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/EditProduct.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/DSEshop/OnlineShopREST.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/DSEshop/OnlineShopREST.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/DSEshop/Admin.class" afterPath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/DSEshop/Admin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/DSEshop/Checkout.class" afterPath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/DSEshop/Checkout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/DSEshop/Customer.class" afterPath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/DSEshop/Customer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/DSEshop/Product.class" afterPath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/DSEshop/Product.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/DSEshop/ProductCatalogue.class" afterPath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/DSEshop/ProductCatalogue.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/DSEshop/ShoppingCart.class" afterPath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/DSEshop/ShoppingCart.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/DSEshop/User.class" afterPath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/DSEshop/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/DSEshop/WishList.class" afterPath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/DSEshop/WishList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/client/Controller.class" afterPath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/client/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/dao/SerializedDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/dao/SerializedDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/misc/Settings.class" afterPath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/misc/Settings.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jasdd.iml" afterPath="$PROJECT_DIR$/jasdd.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/DSEshop/Admin.java" afterPath="$PROJECT_DIR$/src/main/java/DSEshop/Admin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/DSEshop/Checkout.java" afterPath="$PROJECT_DIR$/src/main/java/DSEshop/Checkout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/DSEshop/Customer.java" afterPath="$PROJECT_DIR$/src/main/java/DSEshop/Customer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/DSEshop/Product.java" afterPath="$PROJECT_DIR$/src/main/java/DSEshop/Product.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/DSEshop/ProductCatalogue.java" afterPath="$PROJECT_DIR$/src/main/java/DSEshop/ProductCatalogue.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/DSEshop/ShoppingCart.java" afterPath="$PROJECT_DIR$/src/main/java/DSEshop/ShoppingCart.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/DSEshop/User.java" afterPath="$PROJECT_DIR$/src/main/java/DSEshop/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/DSEshop/WishList.java" afterPath="$PROJECT_DIR$/src/main/java/DSEshop/WishList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/client/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/client/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/SerializedDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/SerializedDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ApplyDiscount.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/main/java/RestOnlineShopService.class" afterPath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/WEB-INF/classes/main/java/RestOnlineShopService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/main/java/RestOnlineShopService.class" afterPath="$PROJECT_DIR$/target/classes/main/java/RestOnlineShopService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/ProductList.jsp" afterPath="$PROJECT_DIR$/out/artifacts/jasdd_war_exploded/ProductList.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/main/java/RestOnlineShopService.java" afterPath="$PROJECT_DIR$/src/main/java/main/java/RestOnlineShopService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/misc/Settings.java" afterPath="$PROJECT_DIR$/src/main/java/misc/Settings.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/AddProduct.jsp" afterPath="$PROJECT_DIR$/web/AddProduct.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Login.jsp" afterPath="$PROJECT_DIR$/web/Login.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/ProductList.jsp" afterPath="$PROJECT_DIR$/web/ProductList.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Register.jsp" afterPath="$PROJECT_DIR$/web/Register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Wishlist.jsp" afterPath="$PROJECT_DIR$/web/Wishlist.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -61,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RestOnlineShopService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RestOnlineShopService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/main/java/RestOnlineShopService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="216" column="26" lean-forward="false" selection-start-line="216" selection-start-column="12" selection-end-line="216" selection-end-column="26" />
+            <state relative-caret-position="167">
+              <caret line="242" column="0" lean-forward="true" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,11 +66,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerList.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CustomerList.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/CustomerList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="43" column="74" lean-forward="false" selection-start-line="43" selection-start-column="74" selection-end-line="43" selection-end-column="74" />
+            <state relative-caret-position="228">
+              <caret line="30" column="51" lean-forward="false" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApplyDiscount.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/ApplyDiscount.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="20" column="55" lean-forward="false" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -118,21 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/Login.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="98" lean-forward="false" selection-start-line="15" selection-start-column="98" selection-end-line="15" selection-end-column="98" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="EditProduct.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/EditProduct.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="98" lean-forward="false" selection-start-line="17" selection-start-column="98" selection-end-line="17" selection-end-column="98" />
+            <state relative-caret-position="315">
+              <caret line="21" column="58" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -151,9 +122,12 @@
       <file leaf-file-name="ProductList.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/ProductList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="98" lean-forward="false" selection-start-line="20" selection-start-column="98" selection-end-line="20" selection-end-column="98" />
-              <folding />
+            <state relative-caret-position="198">
+              <caret line="56" column="82" lean-forward="false" selection-start-line="56" selection-start-column="68" selection-end-line="56" selection-end-column="82" />
+              <folding>
+                <element signature="n#style#0;n#input#1;n#form#3;n#div#0;n#ul#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#form#4;n#div#0;n#ul#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -211,13 +185,14 @@
         <option value="$PROJECT_DIR$/web/AddProduct.jsp" />
         <option value="$PROJECT_DIR$/web/EditProduct.jsp" />
         <option value="$PROJECT_DIR$/web/Login.jsp" />
-        <option value="$PROJECT_DIR$/web/ProductList.jsp" />
         <option value="$PROJECT_DIR$/web/Register.jsp" />
         <option value="$PROJECT_DIR$/web/Wishlist.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/DSEshop/Customer.java" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/main/java/RestOnlineShopService.java" />
         <option value="$PROJECT_DIR$/web/CustomerList.jsp" />
+        <option value="$PROJECT_DIR$/web/ApplyDiscount.jsp" />
+        <option value="$PROJECT_DIR$/web/ProductList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/main/java/RestOnlineShopService.java" />
       </list>
     </option>
   </component>
@@ -285,99 +260,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jasdd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jasdd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jasdd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jasdd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jasdd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jasdd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jasdd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jasdd" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DSEshop" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -982,7 +865,7 @@
       <workItem from="1483622319958" duration="9000" />
       <workItem from="1485032938488" duration="6539000" />
       <workItem from="1485081313483" duration="7763000" />
-      <workItem from="1485092675355" duration="101000" />
+      <workItem from="1485092675355" duration="2065000" />
     </task>
     <task id="LOCAL-00001" summary="ff">
       <created>1480086081896</created>
@@ -1051,11 +934,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37956000" />
+    <option name="totallyTimeSpent" value="39920000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="807" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1077,10 +960,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29667148" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.63496506" sideWeight="0.804265" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31328672" sideWeight="0.804265" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34405595" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3404864" sideWeight="0.19298245" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24749643" sideWeight="0.80701756" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24749643" sideWeight="0.80701756" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1114,7 +997,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/main/java/RestOnlineShopService.java</url>
-          <line>261</line>
+          <line>306</line>
           <properties />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
@@ -1128,13 +1011,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/lib/jersey-server.jar!/org/glassfish/jersey/server/model/ResourceMethodInvoker.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="309" column="0" lean-forward="false" selection-start-line="309" selection-start-column="0" selection-end-line="309" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/javax.ws.rs-api-2.0.jar!/javax/ws/rs/core/AbstractMultivaluedMap.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
@@ -1417,31 +1293,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/EditProduct.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="98" lean-forward="false" selection-start-line="17" selection-start-column="98" selection-end-line="17" selection-end-column="98" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/Login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="98" lean-forward="false" selection-start-line="15" selection-start-column="98" selection-end-line="15" selection-end-column="98" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/ProductList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="98" lean-forward="false" selection-start-line="20" selection-start-column="98" selection-end-line="20" selection-end-column="98" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Register.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="98" lean-forward="false" selection-start-line="15" selection-start-column="98" selection-end-line="15" selection-end-column="98" />
@@ -1486,21 +1338,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/java/RestOnlineShopService.java">
+    <entry file="file://$PROJECT_DIR$/web/EditProduct.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="216" column="26" lean-forward="false" selection-start-line="216" selection-start-column="12" selection-end-line="216" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="315">
+          <caret line="21" column="58" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/CustomerList.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="43" column="74" lean-forward="false" selection-start-line="43" selection-start-column="74" selection-end-line="43" selection-end-column="74" />
+        <state relative-caret-position="228">
+          <caret line="30" column="51" lean-forward="false" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="98" lean-forward="false" selection-start-line="15" selection-start-column="98" selection-end-line="15" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ApplyDiscount.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="20" column="55" lean-forward="false" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ProductList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="56" column="82" lean-forward="false" selection-start-line="56" selection-start-column="68" selection-end-line="56" selection-end-column="82" />
+          <folding>
+            <element signature="n#style#0;n#input#1;n#form#3;n#div#0;n#ul#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#form#4;n#div#0;n#ul#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/java/RestOnlineShopService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="242" column="0" lean-forward="true" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

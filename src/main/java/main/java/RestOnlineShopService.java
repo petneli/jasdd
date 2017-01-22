@@ -200,6 +200,51 @@ public class RestOnlineShopService {
     }
 
     @GET
+    @Path("/applyDiscount")
+    @Produces({MediaType.APPLICATION_JSON, MediaType.TEXT_HTML})
+    public void applyDiscount(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
+
+        String id = request.getParameter("id");
+        HttpSession session= request.getSession(true);
+
+        Product p = admin.getProductById(Integer.parseInt(id));
+
+        session.setAttribute("toBeEdited", p);
+        response.sendRedirect("http://localhost:8080/jasdd_war_exploded/ApplyDiscount.jsp");
+
+        dao.saveData();
+    }
+
+    @POST
+    @Path("/apply_discount")
+    @Produces({MediaType.APPLICATION_JSON, MediaType.TEXT_HTML})
+    public void apply_discount(@FormParam("productName") String productName, @FormParam("productPrice") String productPrice, @FormParam("discount") String discount, @Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
+
+        HttpSession session= request.getSession(true);
+        Product p  = (Product) session.getAttribute("toBeEdited");
+
+        admin.applyDiscountById(p.getProductID(),p.getProductName(), p.getProductPrice(), Double.parseDouble(discount));
+
+        response.sendRedirect("http://localhost:8080/jasdd_war_exploded/ProductList.jsp");
+
+        dao.saveData();
+    }
+
+    @GET
+    @Path("/revertDiscount")
+    @Produces({MediaType.APPLICATION_JSON, MediaType.TEXT_HTML})
+    public void revertDiscount(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
+
+        String id = request.getParameter("id");
+        HttpSession session= request.getSession(true);
+
+        admin.revertDiscountById(Integer.parseInt(id));
+        response.sendRedirect("http://localhost:8080/jasdd_war_exploded/ProductList.jsp");
+
+        dao.saveData();
+    }
+
+    @GET
     @Path("/removeProduct")
     @Produces({MediaType.APPLICATION_JSON, MediaType.TEXT_HTML})
     public void removeProduct(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {

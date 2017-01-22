@@ -50,6 +50,14 @@
                     <input type="hidden" name="id" value="<%=p.getProductID()%>">
                     <input type="submit" style="display: inline;" value="Delete">
                 </form>
+                <form action="../jasdd_war_exploded/rest/onlineShop/applyDiscount" style="display: inline-block;" method="GET">
+                    <input type="hidden" name="id" value="<%=p.getProductID()%>">
+                    <input type="submit" style="display: inline;" value="Apply Discount">
+                </form>
+                <form action="../jasdd_war_exploded/rest/onlineShop/revertDiscount" style="display: inline-block;" method="GET">
+                    <input type="hidden" name="id" value="<%=p.getProductID()%>">
+                    <input type="submit" style="display: inline;" value="Revert Discount">
+                </form>
             </div>
         <br>
                 <%
