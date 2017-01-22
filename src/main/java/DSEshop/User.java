@@ -1,5 +1,6 @@
 package DSEshop;
 
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
@@ -22,7 +23,7 @@ public class User implements Serializable{
         this.password= password;
 
     }
-
+    @XmlElement
     public int getUserID() {
         return userID;
     }
@@ -30,7 +31,7 @@ public class User implements Serializable{
     public void setUserID(int userID) {
         this.userID = userID;
     }
-
+    @XmlElement
     public String getUserName() {
         return userName;
     }
@@ -38,7 +39,7 @@ public class User implements Serializable{
     public void setUserName(String userName) {
         this.userName = userName;
     }
-
+    @XmlElement
     public String getPassword() {
         return password;
     }

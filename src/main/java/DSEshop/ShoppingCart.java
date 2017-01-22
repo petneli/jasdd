@@ -1,7 +1,5 @@
 package DSEshop;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,29 +7,40 @@ import java.util.List;
 /**
  * Created by Daria on 26.10.16.
  */
-@XmlRootElement
 public class ShoppingCart implements Serializable {
 
     private static final long serialVersionUID = -532984408656747948L;
 
-    private Customer customer;
+    private int customerID;
     private List<Product> shoppingCart;
 
-    public ShoppingCart(Customer customer) {
-        this.customer = customer;
+    /**
+     * Creates a shopping cart for each customer that is passed in.
+     * @param customerID id of the customer
+     */
+    public ShoppingCart(int customerID) {
+        this.customerID = customerID;
         this.shoppingCart = new ArrayList<Product>();
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public int getCustomerID() {
+        return customerID;
     }
-    @XmlElement
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+
+    public void setCustomerID(int customerID) {
+        this.customerID = customerID;
     }
 
     public void addToShoppingCart(Product p) {
         this.shoppingCart.add(p);
+    }
+
+    public void removeFromShoppingCart(Product p) {
+        this.shoppingCart.remove(p);
+    }
+
+    public List<Product> getShoppingCart() {
+        return shoppingCart;
     }
 
 }

@@ -1,40 +1,45 @@
 package DSEshop;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 /**
  * Checkout class. No use at the moment. Future functionality will be added.
  */
-@XmlRootElement
 public class Checkout {
-    private Customer customer;
+    private int customerID;
     private int orderID;
     private int shippingID;
     private double subtotal;
     private List <Product> productList;
 
-    public Checkout(Customer customer, int orderID, int shippingID, double subtotal, List<Product> productList) {
-        this.customer = customer;
+    /**
+     * Constructor for the checkout cart.
+     * @param customerID Id of the customer
+     * @param orderID Id of the order that was placed
+     * @param shippingID Id of the shipping
+     * @param subtotal Subtotal amount
+     * @param productList List of the products that were ordered
+     */
+    public Checkout(int customerID, int orderID, int shippingID, double subtotal, List<Product> productList) {
+        this.customerID = customerID;
         this.orderID = orderID;
         this.shippingID = shippingID;
         this.subtotal = subtotal;
         this.productList = productList;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public int getCustomerID() {
+        return customerID;
     }
-    @XmlElement
+
     public void setCustomer(Customer customer) {
-        this.customer = customer;
+        this.customerID = customerID;
     }
 
     public int getOrderID() {
         return orderID;
     }
-    @XmlElement
+
     public void setOrderID(int orderID) {
         this.orderID = orderID;
     }
@@ -42,7 +47,7 @@ public class Checkout {
     public int getShippingID() {
         return shippingID;
     }
-    @XmlElement
+
     public void setShippingID(int shippingID) {
         this.shippingID = shippingID;
     }
@@ -50,7 +55,7 @@ public class Checkout {
     public double getSubtotal() {
         return subtotal;
     }
-    @XmlElement
+
     public void setSubtotal(double subtotal) {
         this.subtotal = subtotal;
     }
@@ -58,7 +63,7 @@ public class Checkout {
     public List<Product> getProductList() {
         return productList;
     }
-    @XmlElement
+
     public void setProductList(List<Product> productList) {
         this.productList = productList;
     }

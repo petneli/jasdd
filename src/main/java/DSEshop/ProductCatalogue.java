@@ -33,12 +33,11 @@ public class ProductCatalogue {
         }
         return instance;
     }
-
+    @XmlElement
     public List<Product> getProductList() {
         return productList;
     }
 
-    @XmlElement
     public void setProductList(List<Product> productList) {
         this.productList = productList;
     }
@@ -49,14 +48,13 @@ public class ProductCatalogue {
      */
     public void addProduct(Product p){ productList.add(p);}          // boolean?
 
-    public Product getProductById(int id){
-        Product product = new Product();
-        for(Product p: productList){
-            if(p.getProductID() == id)
-                product = p;
+    public void removeProduct(int productId){
+        for(int i = 0; i<productList.size(); i++){
+            if(productList.get(i).getProductID() == productId)
+                productList.remove(i);
         }
-        return product;
     }
+
     public String toString(){
         String s = "";
         for(Product p: productList){

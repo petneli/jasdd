@@ -78,7 +78,7 @@ public class Controller implements Initializable{
 
         this.loggedIn = c;
 
-        customerWishlist = loggedIn.getWishList();
+        customerWishlist = admin.getWishListByUserID(loggedIn.getUserID());
 
         productID_wish.setCellValueFactory(new PropertyValueFactory<Product, Integer>("productID"));
         productName_wish.setCellValueFactory(new PropertyValueFactory<Product, String>("productName"));

@@ -17,17 +17,27 @@ public class SerializedDAO {
 
     private String pathCatalogue;
     private String pathCustomers;
+    private String pathWishlists;
+    private String pathShoppingCarts;
     private File fileCatalogue;
     private File fileCustomers;
+    private File fileWishlists;
+    private File fileShoppingCarts;
 
     public SerializedDAO() {
         this.pathCatalogue=Settings.PATH_CATALOGUE;
         this.pathCustomers=Settings.PATH_CUSTOMERS;
+        this.pathWishlists=Settings.PATH_WISHLISTS;
+        this.pathShoppingCarts = Settings.PATH_SHOPPING_CARTS;
         this.fileCatalogue=new File(pathCatalogue);
         this.fileCustomers=new File(pathCustomers);
+        this.fileWishlists=new File(pathWishlists);
+        this.fileShoppingCarts = new File(pathShoppingCarts);
     }
 
-
+    /**
+     * Function that retrieves the data from the specified file.
+     */
     public void getData(){
 
         if(fileCatalogue.exists()){
@@ -54,8 +64,35 @@ public class SerializedDAO {
             }
         }
 
+        if(fileWishlists.exists()) {
+            try {
+                ObjectInputStream ois3 = new ObjectInputStream(new FileInputStream(pathWishlists));
+                List<WishList> wishLists = (List<WishList>) ois3.readObject();
+                Admin.getInstance().setWishLists(wishLists);
+                ois3.close();
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        if(fileShoppingCarts.exists()) {
+            try {
+                ObjectInputStream ois3 = new ObjectInputStream(new FileInputStream(pathShoppingCarts));
+                List<ShoppingCart> shoppingCarts = (List<ShoppingCart>) ois3.readObject();
+                Admin.getInstance().setShoppingCarts(shoppingCarts);
+                ois3.close();
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 
+    /**
+     * Function that saves the data into the specified path of a file.
+     */
     public void saveData(){
         try{
 
@@ -67,6 +104,16 @@ public class SerializedDAO {
             ObjectOutputStream oos2=new ObjectOutputStream(new FileOutputStream(pathCustomers));
             oos2.writeObject(Admin.getInstance().getCustomerList());
             oos2.close();
+
+            ObjectOutputStream oos3=new ObjectOutputStream(new FileOutputStream(pathWishlists));
+            List<WishList> wishLists = Admin.getInstance().getWishLists();
+            oos3.writeObject(wishLists);
+            oos3.close();
+
+            ObjectOutputStream oos4 = new ObjectOutputStream(new FileOutputStream(pathShoppingCarts));
+            List<ShoppingCart> shoppingCarts = Admin.getInstance().getShoppingCarts();
+            oos4.writeObject(shoppingCarts);
+            oos4.close();
 
         }
         catch(Exception e){
