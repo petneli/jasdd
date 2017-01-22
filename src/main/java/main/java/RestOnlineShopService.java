@@ -66,6 +66,7 @@ public class RestOnlineShopService {
                     "    <li><a href=\"http://localhost:8080/jasdd_war_exploded/AddProduct.jsp\">Add Product</a></li>\n" +
                     "    <li><a href=\"http://localhost:8080/jasdd_war_exploded/Wishlist.jsp\">Wishlist</a></li>\n" +
                     "    <li><a href=\"http://localhost:8080/jasdd_war_exploded/CustomerList.jsp\">Customer List</a></li>\n" +
+                    "<li><a href=\"http://localhost:8080/jasdd_war_exploded/ShoppingCart.jsp\">Shopping Cart</a></li>\n" +
                     "  </ul>" +
                     "</body>" +
                     "</html> ";
@@ -139,6 +140,9 @@ public class RestOnlineShopService {
             System.out.println(customer.toString());
             WishList w = admin.getWishListByUserID(customer.getUserID());
             session.setAttribute("wishList", w);
+
+            ShoppingCart s = admin.getShoppingCartByUserID(customer.getUserID());
+            session.setAttribute("shoppingCart", s);
 
             System.out.println("Setting session param: " + customerName);
         }
@@ -312,6 +316,100 @@ public class RestOnlineShopService {
         return w;
     }
 
+    @GET
+    @Path("/shoppingCart")
+    @Produces(MediaType.APPLICATION_XML)
+    public ShoppingCart getShoppingCart(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
 
+        HttpSession session= request.getSession(true);
+        String loggedIn = (String)session.getAttribute("loggedIn");
+
+        ShoppingCart shoppingCart = new ShoppingCart();
+        if (loggedIn!=null) {
+            Customer customer = admin.getCustomerByUsername(loggedIn);
+            shoppingCart = admin.getShoppingCartByUserID(customer.getUserID());
+        } else {
+            response.sendRedirect("http://localhost:8080/jasdd_war_exploded/Login.jsp");
+        }
+        return shoppingCart;
+    }
+
+    @GET
+    @Path("/addToShoppingCart")
+    @Produces({MediaType.APPLICATION_JSON, MediaType.TEXT_HTML})
+    public void addToShoppingCart(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
+
+        String id = request.getParameter("id");
+        HttpSession session= request.getSession(true);
+        String loggedIn = (String)session.getAttribute("loggedIn");
+        Product p = admin.getProductById(Integer.parseInt(id));
+
+        if (loggedIn!=null) {
+            Customer customer = admin.getCustomerByUsername(loggedIn);
+            admin.getShoppingCartByUserID(customer.getUserID()).addToShoppingCart(p);
+
+            ShoppingCart shoppingCart = admin.getShoppingCartByUserID(customer.getUserID());
+            session.setAttribute("shoppingCart", shoppingCart);
+            response.sendRedirect("http://localhost:8080/jasdd_war_exploded/ShoppingCart.jsp");
+        } else {
+            response.sendRedirect("http://localhost:8080/jasdd_war_exploded/Login.jsp");
+        }
+        dao.saveData();
+    }
+
+    @GET
+    @Path("/removeProductFromShoppingCart")
+    @Produces({MediaType.APPLICATION_JSON, MediaType.TEXT_HTML})
+    public void removeProductFromShoppingCart(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
+
+        String id = request.getParameter("id");
+        HttpSession session= request.getSession(true);
+
+        Product p = admin.getProductById(Integer.parseInt(id));
+        String loggedIn = (String)session.getAttribute("loggedIn");
+
+        System.out.println(p.getProductName());
+
+        Customer customer = admin.getCustomerByUsername(loggedIn);
+        admin.getShoppingCartByUserID(customer.getUserID()).removeFromShoppingCartById(Integer.parseInt(id));
+
+        ShoppingCart shoppingCart = admin.getShoppingCartByUserID(customer.getUserID());
+        session.setAttribute("shoppingCart", shoppingCart);
+        response.sendRedirect("http://localhost:8080/jasdd_war_exploded/ShoppingCart.jsp");
+
+        dao.saveData();
+
+    }
+
+    @GET
+    @Path("/editCustomer")
+    @Produces({MediaType.APPLICATION_JSON, MediaType.TEXT_HTML})
+    public void editCustomer(@Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
+
+        String id = request.getParameter("id");
+        HttpSession session= request.getSession(true);
+
+        Customer c = admin.getCustomerById(Integer.parseInt(id));
+
+        session.setAttribute("customerToBeEdited", c);
+        response.sendRedirect("http://localhost:8080/jasdd_war_exploded/EditCustomer.jsp");
+
+        dao.saveData();
+    }
+
+    @POST
+    @Path("/edit_customer")
+    @Produces({MediaType.APPLICATION_JSON, MediaType.TEXT_HTML})
+    public void edit_customer(@FormParam("userName") String userName, @FormParam("userPassword") String userPassword, @FormParam("userBilling") String userBilling, @FormParam("userPayment") String userPayment, @FormParam("userId") String userId,  @Context HttpServletRequest request, @Context HttpServletResponse response) throws IOException {
+
+        HttpSession session= request.getSession(true);
+        Customer c  = (Customer) session.getAttribute("customerToBeEdited");
+
+        admin.editUserById(Integer.parseInt(userId),userName,userPassword,userBilling,userPayment);
+
+        response.sendRedirect("http://localhost:8080/jasdd_war_exploded/CustomerList.jsp");
+
+        dao.saveData();
+    }
 
 }

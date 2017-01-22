@@ -54,7 +54,7 @@ public class Customer extends User implements Serializable {
     }
 
     public String toString(){
-        return " [Username: " + getUserName() + "] ";
+        return " [Username: " + getUserName() + ", Billing Address: ] " + getBillingAddress() + ", Payment Mehtod: " + getPaymentMethod();
     }
 
 }

@@ -20,6 +20,7 @@
     <li><a href="http://localhost:8080/jasdd_war_exploded/AddProduct.jsp">Add Product</a></li>
     <li><a href="http://localhost:8080/jasdd_war_exploded/Wishlist.jsp">Wishlist</a></li>
     <li><a href="http://localhost:8080/jasdd_war_exploded/CustomerList.jsp">Customer List</a></li>
+    <li><a href="http://localhost:8080/jasdd_war_exploded/ShoppingCart.jsp">Shopping Cart</a></li>
 </ul>
 
 <title>Customer List</title>
@@ -43,6 +44,10 @@
         <form action="../jasdd_war_exploded/rest/onlineShop/removeCustomer" style="display: inline-block;" method="GET">
             <input type="hidden" name="username" value="<%=c.getUserName()%>">
             <input type="submit" style="display: inline;" value="Delete">
+        </form>
+        <form action="../jasdd_war_exploded/rest/onlineShop/editCustomer" style="display: inline-block;" method="GET">
+            <input type="hidden" name="id" value="<%=c.getUserID()%>">
+            <input type="submit" style="display: inline;" value="Edit">
         </form>
     </div>
     <br>

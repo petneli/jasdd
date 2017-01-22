@@ -23,6 +23,8 @@ public class ShoppingCart implements Serializable {
         this.shoppingCart = new ArrayList<Product>();
     }
 
+    public ShoppingCart(){}
+
     public int getCustomerID() {
         return customerID;
     }
@@ -37,6 +39,13 @@ public class ShoppingCart implements Serializable {
 
     public void removeFromShoppingCart(Product p) {
         this.shoppingCart.remove(p);
+    }
+
+    public void removeFromShoppingCartById(int productId){
+        for(int i=0; i<shoppingCart.size(); i++){
+            if(shoppingCart.get(i).getProductID() == productId)
+                shoppingCart.remove(i);
+        }
     }
 
     public List<Product> getShoppingCart() {

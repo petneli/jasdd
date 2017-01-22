@@ -18,10 +18,10 @@ public class Settings {
 
 
 
-    public final static String PATH_CATALOGUE = "/Users/nelipetkova/Desktop/GitLab/g2016w_dse_0206/untitled/src/catalogue.txt";
-    public final static String PATH_CUSTOMERS = "/Users/nelipetkova/Desktop/GitLab/g2016w_dse_0206/untitled/src/customers.txt";
-    public final static String PATH_WISHLISTS = "/Users/nelipetkova/Desktop/GitLab/g2016w_dse_0206/untitled/src/wishlists.txt";
-    public final static String PATH_SHOPPING_CARTS = "/Users/nelipetkova/Desktop/GitLab/g2016w_dse_0206/untitled/src/shoppingCarts.txt";
+//    public final static String PATH_CATALOGUE = "/Users/nelipetkova/Desktop/GitLab/g2016w_dse_0206/untitled/src/catalogue.txt";
+//    public final static String PATH_CUSTOMERS = "/Users/nelipetkova/Desktop/GitLab/g2016w_dse_0206/untitled/src/customers.txt";
+//    public final static String PATH_WISHLISTS = "/Users/nelipetkova/Desktop/GitLab/g2016w_dse_0206/untitled/src/wishlists.txt";
+//    public final static String PATH_SHOPPING_CARTS = "/Users/nelipetkova/Desktop/GitLab/g2016w_dse_0206/untitled/src/shoppingCarts.txt";
 
     //public final static String PATH_CATALOGUE = "/Users/Danutz/Documents/~UNI/WS 2016/DSE/Test/g2016w_dse_0206/untitled/src/catalogue.txt";
     //public final static String PATH_CUSTOMERS = "/Users/Danutz/Documents/~UNI/WS 2016/DSE/Test/g2016w_dse_0206/untitled/src/customers.txt";
@@ -29,10 +29,10 @@ public class Settings {
     //public final static String PATH_CATALOGUE = "/Users/Daria/IdeaProjects/g2016w_dse_0206/untitled/src/catalogue.txt";
     //public final static String PATH_CUSTOMERS = "/Users/Daria/IdeaProjects/g2016w_dse_0206/untitled/src/customers.txt";
 
-    /*
-    public final static String PATH_CATALOGUE = "/Users/sebastian/Desktop/dseAbgabe/g2016w_dse_0206/untitled/src/catalogue.txt";
-    public final static String PATH_CUSTOMERS = "/Users/sebastian/Desktop/dseAbgabe/g2016w_dse_0206/untitled/src/customers.txt";
-    public final static String PATH_WISHLISTS = "/Users/sebastian/Desktop/dseAbgabe/g2016w_dse_0206/untitled/src/wishlists.txt";
-    public final static String PATH_SHOPPING_CARTS = "/Users/sebastian/Desktop/dseAbgabe/g2016w_dse_0206/untitled/src/shoppingCarts.txt";
-*/
+
+    public final static String PATH_CATALOGUE = "/Users/sebastian/Desktop/dseFinal/jasdd/src/catalogue.txt";
+    public final static String PATH_CUSTOMERS = "/Users/sebastian/Desktop/dseFinal/jasdd/src/customers.txt";
+    public final static String PATH_WISHLISTS = "/Users/sebastian/Desktop/dseFinal/jasdd/src/wishlists.txt";
+    public final static String PATH_SHOPPING_CARTS = "/Users/sebastian/Desktop/dseFinal/jasdd/src/shoppingCarts.txt";
+
 }

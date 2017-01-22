@@ -1,15 +1,16 @@
+<%@ page import="DSEshop.ShoppingCart" %>
 <%@ page import="DSEshop.Product" %>
-<%@ page import="java.util.List" %>
-<%@ page import="DSEshop.Customer" %><%--
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
-  User: nelipetkova
-  Date: 26.11.16
-  Time: 14:08
+  User: sebastian
+  Date: 22/01/2017
+  Time: 15:21
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <title>Shopping Cart</title>
 </head>
 <body>
 <ul>
@@ -22,43 +23,30 @@
     <li><a href="http://localhost:8080/jasdd_war_exploded/CustomerList.jsp">Customer List</a></li>
     <li><a href="http://localhost:8080/jasdd_war_exploded/ShoppingCart.jsp">Shopping Cart</a></li>
 </ul>
-
-<title>Customer List</title>
 <ul>
     <%
-        List<Customer> customerList = (List<Customer>)session.getAttribute("customerList");
+        ShoppingCart shoppingCart = (ShoppingCart) session.getAttribute("shoppingCart");
 
-        if(customerList == null) {
-            System.out.println("No customers yet.");
+        if(shoppingCart == null) {
+            System.out.println("No products in the cart.");
         }
         else {
+            List<Product> list = shoppingCart.getShoppingCart();
+
+            for(Product p : list) {
     %>
-
-    <%
-        for(Customer c : customerList) {
-    %>
-
-    <%= c.toString() + "  " %>
-    <div style="display: inline-block;">
-
-        <form action="../jasdd_war_exploded/rest/onlineShop/removeCustomer" style="display: inline-block;" method="GET">
-            <input type="hidden" name="username" value="<%=c.getUserName()%>">
-            <input type="submit" style="display: inline;" value="Delete">
-        </form>
-        <form action="../jasdd_war_exploded/rest/onlineShop/editCustomer" style="display: inline-block;" method="GET">
-            <input type="hidden" name="id" value="<%=c.getUserID()%>">
-            <input type="submit" style="display: inline;" value="Edit">
-        </form>
-    </div>
+    <%= p.toString() %>
+    <form action="../jasdd_war_exploded/rest/onlineShop/removeProductFromShoppingCart" style="display: inline-block;" method="GET">
+        <input type="hidden" name="id" value="<%=p.getProductID()%>">
+        <input type="submit" style="display: inline;" value="Delete">
+    </form>
     <br>
     <%
-        }
-    %>
-
-    <%
+            }
         }
     %>
 </ul>
+
 
 </body>
 </html>

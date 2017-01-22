@@ -1,9 +1,12 @@
+<%@ page import="DSEshop.Product" %>
+<%@ page import="java.security.ProtectionDomain" %>
+<%@ page import="DSEshop.Customer" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Add Product</title>
+    <title>Edit Profile</title>
 </head>
 <body>
 <ul>
@@ -17,14 +20,22 @@
     <li><a href="http://localhost:8080/jasdd_war_exploded/ShoppingCart.jsp">Shopping Cart</a></li>
 </ul>
 
-<form action="../jasdd_war_exploded/rest/onlineShop/add_product" method="POST">
+<% Customer c = (Customer) session.getAttribute("customerToBeEdited"); %>
+<form action="../jasdd_war_exploded/rest/onlineShop/edit_customer" method="POST">
     <label>Name: </label>
-    <input name="productName" />
+    <input name="userName" value="<%=c.getUserName()%>"/>
     <br/>
     <label>Price: </label>
-    <input name="productPrice" />
+    <input name="userPassword" value="<%=c.getPassword()%>"/>
     <br/>
-    <button id="submit" value="Submit">Submit</button>
+    <label>Price: </label>
+    <input name="userBilling" value="<%=c.getBillingAddress()%>"/>
+    <br/>
+    <label>Price: </label>
+    <input name="userPayment" value="<%=c.getPaymentMethod()%>"/>
+    <br/>
+    <input name="userId" type="hidden" value="<%=c.getUserID()%>">
+    <button id="submit" value="Submit">Edit</button>
 </form>
 
 </body>
